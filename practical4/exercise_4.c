@@ -3,26 +3,23 @@
 
 /* tan_x is used to record the radians calculated each time */
 
-float tan_x[13];
+# define N 13
+float tan_x[N];
 
 float degtorad(float arg);
-float area_cal(float tan_x[],int n, float b, float a);
+float area_cal();
 
-int main(void)
-{
+int main(void){
 
-int n, i;
+int i;
 float area, b, a;
 
-n = 12;
-i = 0;
 b = 60;
 a = 0;
 
-
 /* question 1 part 2 construct a loop*/
 
-for (i; i < n; i++){
+for (i = 0; i < N; i++){
  float degree, radval; 
  
 /* question 1 part 3 generate the degree angles */
@@ -42,16 +39,17 @@ for (i; i < n; i++){
 /* print the result of tan_x */
 
 printf("The array is: ");
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < N; i++) {
         printf("%f ", tan_x[i]);
     }
     printf("\n");
 
-/* question 2 */
+/* question 2, Create a function/subroutine that calculates the area */
 
-area = area_cal(tan_x,n,b,a);
+area = area_cal();
 
 printf("the area is %f\n", area);
+printf("real result %f\n", log(2.0));
 
 return 0;
 }
@@ -68,18 +66,18 @@ float degtorad(float arg) {
 
 /* question 2 create a function to calculate the area */
 
-float area_cal(float tan_x[],int n,float b,float a){
+float area_cal(){
 
    int i;
    float sum; 
 
    sum = 0.0;
 
-   for (i = 0; i < n; i++){
+   for (i = 0; i < N; i++){
    sum = sum + tan_x[i] + tan_x[i + 1]; 
     
    } 
 
-   return(sum * (b - a) / (2 * n));
+   return(sum * degtorad((60 - 0) / (2 * N)));
 }
  
