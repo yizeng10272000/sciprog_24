@@ -5,7 +5,7 @@
 #define p 3 
 #define q 4
 
-float multiply(int i, int j, double A[n][p], double B[p][q]);
+void matmult(double A[n][p], double B[p][q], double C[n][q]);
 
 int main(void) {
     int i, j;
@@ -36,11 +36,7 @@ int main(void) {
     }
 
     /* Determine the elements of C */
-    for(i = 0; i < n; i++) {
-        for(j = 0; j < q; j++) {
-            C[i][j] = multiply(i, j, A, B);    
-        }
-    }
+    matmult(A, B, C);
 
     printf("The matrix C is:\n");
     for (i = 0; i < n; i++) {
@@ -58,7 +54,7 @@ int main(void) {
         printf("\n");
     }
     
-        printf("The matrix B is:\n");
+    printf("The matrix B is:\n");
     for (i = 0; i < p; i++) {
         for (j = 0; j < q; j++) {
             printf("%f ", B[i][j]);
@@ -67,15 +63,4 @@ int main(void) {
     }
 
     return 0;
-}
-
-float multiply(int i, int j, double A[n][p], double B[p][q]) {
-    float sum = 0;
-    int k;
-    
-    for(k = 0; k < p; k++) {
-        sum += A[i][k] * B[k][j];
-    }
-    
-    return sum;
 }
