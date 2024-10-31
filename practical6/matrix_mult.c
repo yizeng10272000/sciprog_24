@@ -8,7 +8,7 @@
 float multiply(int i, int j, double A[n][p], double B[p][q]);
 
 int main(void) {
-    int i, j;
+    int i, j; // loop indices
     
     /* Declare the matrix A, B and C */
     double A[n][p], B[p][q], C[n][q];
