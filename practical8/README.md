@@ -1,16 +1,16 @@
-## Practical 6
+# Practical 8
 
 This folder contain practical 8 codes. Including calculation of the Greatest Common Divisor (GCD).
 
-### Compile: 
+## Compile: 
 
 * gcc -o exercise_8 exercise_8.c
 
-### Excute:
+## Excute:
 
 * ./exercise_8
 
-### Result: (we input a = 8 and b = 12 as example)
+## Result: (we input a = 8 and b = 12 as example)
 
 * please enter your number of a
 * 8
