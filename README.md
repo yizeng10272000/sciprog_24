@@ -1,19 +1,40 @@
-## Practical 8
+## Practical 7
 
-This folder contain practical 8 codes. Including calculation of the Greatest Common Divisor (GCD).
+This folder contain practical 7 codes. Including find the estimation and pointers dynamic memory allocation.
+
+
+## For find the estimation:
 
 ### Compile: 
 
-* gcc -o exercise_8 exercise_8.c
+* gcc -o finde finde.c -lm
 
 ### Excute:
 
-* ./exercise_8
+* ./finde
 
-### Result: (we input a = 8 and b = 12 as example)
+### Result: (we input order = 3 as example)
 
-* please enter your number of a
-* 8
-* please enter your number of b
-* 12
-* the greatest common divisor between 8 and 12 is 4
+* please enter the order you wish to use
+* 3
+* e is estimated as 2.6666666667, with difference -5.161516e-02
+
+### Note:
+
+* When our order becomes higher, due to the calculation accuracy of the computer, 
+* the value of the high-order polynomial will become negative, thereby reducing the estimation accuracy. 
+
+
+## For pointers dynamic memory allocation:
+
+### Compile: 
+
+* gcc -o pointers pointers.c
+
+### Excute:
+
+* ./pointers
+
+### Result:
+
+* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
