@@ -1,8 +1,19 @@
-# Git Assignment Project
+## Practical 8
 
-Name: Yi Zeng
-Student number: 23202396
+This folder contain practical 8 codes. Including calculation of the Greatest Common Divisor (GCD).
 
-# Introduction:
+### Compile: 
 
-This is my repo for 24/25 Scientific Programming Concepts
+* gcc -o exercise_8 exercise_8.c
+
+### Excute:
+
+* ./exercise_8
+
+### Result: (we input a = 8 and b = 12 as example)
+
+* please enter your number of a
+* 8
+* please enter your number of b
+* 12
+* the greatest common divisor between 8 and 12 is 4
