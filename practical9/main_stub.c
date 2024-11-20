@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_FILE_NAME 100
-#include "magic_square.h"
+#include "magic_square_stub.h"
 
 int getlines(char filename[MAX_FILE_NAME]);
 
@@ -27,21 +27,42 @@ int main(){
     for (int i = 0; i < n; i++) {
         matrix[i] = (int *)malloc(n * sizeof(int));
     
-
+}
     // TODO:inputting integer data into the matrix;
 
-
+    int j;
+    for(i = 0; i < n; i++){
+    for(j = 0; j < n; j++){
+        fscanf(f,"%d", &matrix[i][j]);
+    
+}
+}
+    int is_square_magic = isMagicSquare(matrix, n);
+    
+    if(is_square_magic == 0){
+    
+        printf("This is not magic\n");
+        
+    }
+    else{
+    
+        printf("This is magic\n");
+        
+    }
+    
     // TODO: Freeing each row separately before freeing the array of pointers
     for (int i = 0; i < n; i++) {
         free(matrix[i]);
-    }
+    
+}
     free(matrix);
 
     // TODO:Close the file
-     fclose(f);
+    fclose(f);
 
     return 0;
-}  
+  
+}
 
 //##!
 
