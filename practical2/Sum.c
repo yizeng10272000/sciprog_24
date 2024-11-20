@@ -10,7 +10,7 @@ int main(void) {
 /* First sum */
    sum1 = 0.0;
    for (i=1; i<=1000; i++) {
-      sum1 = sum2+1.0/(float)i;
+      sum1 = sum1+1.0/(float)i;
    }
 
 
