@@ -28,11 +28,8 @@ int isMagicSquare(int ** square, const int n) {
         for(j = 0; j < n; j++){
             sum = sum + square[i][j];
             }
-            if (sum == M){
-            continue;
-            }
-            else{
-                printf("the sum of column %d is not equal to M", i + 1);
+            if (sum != M){
+                printf("the sum of column %d is not equal to M\n", i + 1);
                 return 0;
             }
     }
@@ -44,13 +41,10 @@ int isMagicSquare(int ** square, const int n) {
         for(i = 0; i < n; i++){
             sum = sum + square[i][j];
             }
-            if (sum == M){
-                continue;
-            }
-            else{
-                printf("the sum of row %d is not equal to M", j + 1);
+            if (sum != M){
+                printf("the sum of row %d is not equal to M\n", j + 1);
                 return 0;
-            } 
+            }
     }
 
 
@@ -63,41 +57,22 @@ int isMagicSquare(int ** square, const int n) {
         for(i = 0; i < n; i++){
             sum = sum + square[i][i];
             }
-            if (sum == M){
-                continue;
-            }
-            else{
-                printf("the sum of main diagonal are not equal to M");
-                return 0;
-            }
+        if (sum != M){
+            printf("the sum of main diagonal are not equal to M\n");
+            return 0;
+        }
+        
     
     
-        // check every secondary diagonals add up to M
-        sum = 0;
-        for(i = 1; i < n; i++){
-            sum = sum + square[i][i - 1];
-            }
-            if (sum == M){
-                continue;
-            }
-            else{
-                printf("the sum of secondary diagonal are not equal to M");
-                return 0;
-            } 
-
-
-        // check every secondary diagonals add up to M
-        sum = 0;
-        for(i = 0; i < n - 1; i++){
-            sum = sum + square[i][i + 1];
-            }
-            if (sum == M){
-                continue;
-            }
-            else{
-                printf("the sum of secondary diagonal are not equal to M");
-                return 0;
-            } 
+    // check secondary diagonals add up to M
+    sum = 0;
+    for(i = 0; i < n; i++){
+        sum = sum + square[i][n - i - 1];
+    }
+    if (sum != M){
+        printf("the sum of secondary diagonal are not equal to M\n");
+        return 0;
+    }
 
     return 1;
 }
